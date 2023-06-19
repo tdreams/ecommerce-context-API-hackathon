@@ -22,7 +22,7 @@ const FetchHeadphones = () => {
                   <img
                     src={product.image}
                     alt={product.image}
-                    className="h-full w-full object-cover object-center lg:h-full lg:w-full group-hover:p-3 "
+                    className=" object-cover object-center lg:h-full lg:w-full group-hover:scale-[1.1] transition-all "
                   />
                 </div>
                 <div className="mt-4 flex justify-between">
@@ -44,7 +44,7 @@ const FetchHeadphones = () => {
                     {/* {product.color[0]}-{product.color[1]} */}
                   </p>
                   <div className=" flex relative">
-                    <p className="text-sm font-medium text-gray-900">
+                    <p className="text-sm font-medium text-black mt-[6px]">
                       ${product.price}
                     </p>
                   </div>

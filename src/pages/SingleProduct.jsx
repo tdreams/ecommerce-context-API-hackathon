@@ -6,6 +6,13 @@ import { useGlobalContext } from "../Context/context";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useParams } from "react-router-dom";
+import {
+  AiOutlineMinus,
+  AiOutlinePlus,
+  AiFillStar,
+  AiOutlineStar,
+} from "react-icons/ai";
+import ProductRating from "../components/ProductRating";
 
 const SingleProduct = () => {
   const [selectedSize, setSelectedSize] = useState();
@@ -41,7 +48,13 @@ const SingleProduct = () => {
           <div className="w-full md:w-auto flex-[1.5] max-w-[500px] lg:max-w-full mx-auto lg:mx-0">
             {/*  <img src={newItem.image} alt="product" /> */}
             <ProductCarroussel images={newItem.images} />
+            <div className="mt-[120px]">
+              <h2 className="text-center m-[50px] text-xl font-medium">
+                You may also like
+              </h2>
+            </div>
           </div>
+
           {/* left column end */}
 
           {/* right column start */}
@@ -50,6 +63,8 @@ const SingleProduct = () => {
             <div className="text-[34px] font-semibold mb-2 leading-tight">
               {newItem.name}
             </div>
+
+            <ProductRating rating={newItem.rating} />
 
             {/* PRODUCT SUBTITLE */}
             <div className="text-lg font-semibold mb-5">
@@ -100,7 +115,7 @@ const SingleProduct = () => {
             <ToastContainer />
             {/* ADD TO CART BUTTON START */}
             <button
-              className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-10 hover:opacity-75"
+              className="w-full py-4 rounded-full bg-black text-white text-lg font-medium active:scale-95 mb-10 hover:scale-[1.1]  transition-all"
               onClick={handleAddToCart}
             >
               Add to Cart

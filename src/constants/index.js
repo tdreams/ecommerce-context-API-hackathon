@@ -13,6 +13,7 @@ export const data = [
   {
     id: "recZkNf2kwmdBcqd0",
     name: "Apple AirPods Pro (2nd Generation) Wireless Earbuds",
+    rating: 4.5,
     price: 200,
     image: "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_SX466_.jpg",
     company: "Apple",
@@ -59,6 +60,7 @@ export const data = [
   {
     id: "recZkNf2kwmdBcqd1",
     name: "Beats Studio3 Wireless Noise Cancelling Over-Ear Headphones",
+    rating: 3.5,
     price: 169,
     image: "https://m.media-amazon.com/images/I/51-+O3-wFxL._AC_SX466_.jpg",
     company: "Beats",
@@ -112,6 +114,7 @@ export const data = [
   {
     id: "recZkNf2kwmdBcqd2",
     name: "JBL GO2 - Waterproof Ultra Portable Bluetooth Speaker - Red",
+    rating: 4.7,
     price: 22,
     image: "https://m.media-amazon.com/images/I/81dTwUOdPmL._AC_SX569_.jpg",
     company: "JBL",
@@ -161,6 +164,7 @@ export const data = [
   {
     id: "recZkNf2kwmdBcqd3",
     name: "Beats Studio3 Wireless Noise Cancelling Over-Ear Headphones",
+    rating: 2.5,
     price: 260,
     image: "Beats Studio3 Wireless Noise Cancelling Over-Ear Headphones",
     company: "beats",
@@ -212,6 +216,7 @@ export const data = [
   {
     id: "recZkNf2kwmdBcqd4",
     name: "Beats Flex Wireless Earbuds – Apple W1 Headphone Chip",
+    rating: 4.4,
     price: 50,
     image: "https://m.media-amazon.com/images/I/61WT1dcszdL._AC_SX466_.jpg",
     company: "Beats",
@@ -266,6 +271,7 @@ export const data = [
   {
     id: "recZkNf2kwmdBcqd5",
     name: "BD&M Wireless Earbuds, Bluetooth Gaming Earbuds Wireless Headphones",
+    rating: 2.5,
     price: 10,
     image: "https://m.media-amazon.com/images/I/61fko5NDVAL._AC_SX425_.jpg",
     company: "BD&M",
@@ -311,6 +317,7 @@ export const data = [
   {
     id: "recZkNf2kwmdBcqd6",
     name: "pple iPhone 14 Pro Max, 128GB, Space Black - Unlocked",
+    rating: 5,
     price: 1200,
     image: "https://m.media-amazon.com/images/I/51uD1lmrV8L._AC_SX679_.jpg",
     company: "Apple",
@@ -350,6 +357,7 @@ export const data = [
   {
     id: "recZkNf2kwmdBcqd7",
     name: "SAMSUNG Galaxy A54 5G A Series Cell Phone, Factory Unlocked Android Smartphone, 128GB w/ 6.4”",
+    rating: 4.8,
     price: 400,
     image:
       "https://m.media-amazon.com/images/I/61MEp5HIdBL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
@@ -403,6 +411,7 @@ export const data = [
   {
     id: "recZkNf2kwmdBcqd8",
     name: "SAMSUNG Galaxy A23 5G A Series Cell Phone, Factory Unlocked Android Smartphone, 64GB,",
+    rating: 4.2,
     price: 200,
     image: "https://m.media-amazon.com/images/I/81AR3K-lOFL._AC_SX425_.jpg",
     company: "Samsung",
@@ -454,6 +463,7 @@ export const data = [
   {
     id: "recZkNf2kwmdBcqd9",
     name: "Google Pixel 7a - Unlocked Android Cell Phone ",
+    rating: 3.9,
     price: 500,
     image: "https://m.media-amazon.com/images/I/8162vKQDSYL._AC_SX425_.jpg",
     company: "Google",

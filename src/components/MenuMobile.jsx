@@ -2,8 +2,10 @@ import React from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { navMenu, subMenuNav } from "../constants";
 import { NavLink } from "react-router-dom";
+import { useGlobalContext } from "../Context/context";
 
 const MenuMobile = ({ showCatMenu, setShowCatMenu, setMobileMenu }) => {
+  const { products } = useGlobalContext();
   return (
     <ul className="flex flex-col md:hidden font-bold absolute top-[50px] left-0 w-full h-[calc(100vh-50px)] bg-white border-t text-black">
       {navMenu.map((item) => {
@@ -22,6 +24,9 @@ const MenuMobile = ({ showCatMenu, setShowCatMenu, setMobileMenu }) => {
                 {showCatMenu && (
                   <ul className="bg-black/[0.05] -mx-5 mt-4 -mb-4">
                     {subMenuNav.map((submenu) => {
+                      const count = products.filter(
+                        (product) => product.category === submenu.name
+                      ).length;
                       return (
                         <NavLink
                           key={submenu.id}
@@ -33,7 +38,7 @@ const MenuMobile = ({ showCatMenu, setShowCatMenu, setMobileMenu }) => {
                         >
                           <li className="py-4 px-8 border-t flex justify-between">
                             {submenu.name}
-                            <span className="opacity-50 text-sm">78</span>
+                            <span className="opacity-50 text-sm">{count}</span>
                           </li>
                         </NavLink>
                       );
