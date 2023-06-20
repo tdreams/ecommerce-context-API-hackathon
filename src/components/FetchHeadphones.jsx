@@ -1,11 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useCartContext } from "../Context/cart_context";
 import { useGlobalContext } from "../Context/context";
 import { NavLink } from "react-router-dom";
 
 const FetchHeadphones = () => {
-  const { amount, products, addToCart, inc, dec } = useGlobalContext();
+  const { products } = useGlobalContext();
   const { add } = useCartContext();
+
+  if (products.length === 0) {
+    return <p>No headphones available.</p>; // Display a message when no headphones are available
+  }
+
   return (
     <div className="mb-10">
       <h2 className="mt-2 mb-2 text-[24px] font-medium">Headphones For You!</h2>
@@ -22,30 +27,24 @@ const FetchHeadphones = () => {
                   <img
                     src={product.image}
                     alt={product.image}
-                    className=" object-cover object-center lg:h-full lg:w-full group-hover:scale-[1.1] transition-all "
+                    className="object-cover object-center lg:h-full lg:w-full group-hover:scale-[1.1] transition-all"
                   />
                 </div>
                 <div className="mt-4 flex justify-between">
                   <div>
                     <h3 className="text-sm text-gray-700">
-                      <a href={product.href}>
-                        <span aria-hidden="true" className="absolute inset-0" />
-                        {product.name}
-                      </a>
+                      <span aria-hidden="true" className="absolute inset-0" />
+                      {product.name}
                     </h3>
                   </div>
-
-                  {/* <p className="text-sm font-medium text-gray-900">
-            ${product.price}
-          </p> */}
                 </div>
-                <div className="flex w-full ">
+                <div className="flex w-full">
                   <p className="mt-1 text-sm text-gray-500">
                     {/* {product.color[0]}-{product.color[1]} */}
                   </p>
-                  <div className=" flex relative">
+                  <div className="flex relative">
                     <p className="text-sm font-medium text-black mt-[6px]">
-                      ${product.price}
+                      ${formatPrice(product.price)}
                     </p>
                   </div>
                 </div>
@@ -63,6 +62,11 @@ const FetchHeadphones = () => {
       </div>
     </div>
   );
+};
+
+// Function to format the price with commas and decimal points
+const formatPrice = (price) => {
+  return price.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 };
 
 export default FetchHeadphones;

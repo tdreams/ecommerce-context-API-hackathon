@@ -114,12 +114,6 @@ nav a:focus {
   transition: all 0.25s ease-in-out;
 }
  */
-.stickyN {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
 
 .btn {
   @apply rounded-md py-3 px-[6.2rem] text-xs font-bold  tracking-wider;
@@ -131,4 +125,16 @@ nav a:focus {
 
 .btn-secondary {
   @apply flex rounded-sm py-2 px-[1rem] text-xs font-medium tracking-wider bg-[rgba(186,231,255,0.3)] text-white border-r-transparent;
+}
+.sticky {
+  position: sticky;
+}
+
+.sticky.top-0 {
+  top: 0;
+}
+
+.scrollable {
+  overflow-y: auto;
+  max-height: calc(100vh - 20px); /* Adjust the height as needed */
 }
