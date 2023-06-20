@@ -2,7 +2,7 @@ import React from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { navMenu, subMenuNav } from "../constants";
 import { NavLink } from "react-router-dom";
-import { useGlobalContext } from "../Context/context";
+import { useGlobalContext } from "../context/context";
 
 const Menu = ({ showCatMenu, setShowCatMenu }) => {
   const { products } = useGlobalContext();

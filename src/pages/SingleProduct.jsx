@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import ProductCarroussel from "../components/ProductCarroussel";
 import { Wrapper } from "../components";
-import { useCartContext } from "../Context/cart_context";
-import { useGlobalContext } from "../Context/context";
+import { useCartContext } from "../context/cart_context";
+import { useGlobalContext } from "../context/context";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useParams } from "react-router-dom";

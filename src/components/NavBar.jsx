@@ -6,7 +6,7 @@ import MenuMobile from "./MenuMobile";
 import { BsCart } from "react-icons/bs";
 import { VscChromeClose } from "react-icons/vsc";
 import { BiMenuAltRight } from "react-icons/bi";
-import { useCartContext } from "../Context/cart_context";
+import { useCartContext } from "../context/cart_context";
 
 const NavBar = () => {
   const { cart } = useCartContext();
