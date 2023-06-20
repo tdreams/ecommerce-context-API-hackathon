@@ -1,6 +1,6 @@
 import React from "react";
-import { useCartContext } from "../Context/cart_context";
-import { useGlobalContext } from "../Context/context";
+import { useCartContext } from "../context/cart_context";
+import { useGlobalContext } from "../context/context";
 import { NavLink } from "react-router-dom";
 
 const FetchHeadphones = () => {

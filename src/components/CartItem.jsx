@@ -1,6 +1,6 @@
 import React from "react";
 import { RiDeleteBin6Line } from "react-icons/ri";
-import { useCartContext } from "../Context/cart_context";
+import { useCartContext } from "../context/cart_context";
 
 const CartItem = () => {
   const { amount, cart, clear, decProd, incProd, del } = useCartContext();
