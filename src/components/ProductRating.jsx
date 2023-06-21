@@ -15,8 +15,8 @@ const ProductRating = ({ rating }) => {
     <div className="flex items-baseline align-middle gap-1">
       <div className="mt-[10px] flex gap-[5px] items-center text-[#f02d34]">
         {starIcons}
+        <p className="text-sm">({rating})</p>
       </div>
-      <p className="text-sm">({rating})</p>
     </div>
   );
 };

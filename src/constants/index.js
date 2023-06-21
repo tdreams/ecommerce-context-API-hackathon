@@ -316,7 +316,7 @@ export const data = [
 
   {
     id: "recZkNf2kwmdBcqd6",
-    name: "pple iPhone 14 Pro Max, 128GB, Space Black - Unlocked",
+    name: "Apple iPhone 14 Pro Max, 128GB, Space Black - Unlocked",
     rating: 5,
     price: 1200,
     image: "https://m.media-amazon.com/images/I/51uD1lmrV8L._AC_SX679_.jpg",

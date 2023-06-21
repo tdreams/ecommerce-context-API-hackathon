@@ -14,6 +14,7 @@ import {
 } from "react-icons/ai";
 import ProductRating from "../components/ProductRating";
 import FetchHeadphones from "../components/FetchHeadphones";
+import YouMayLike from "../components/YouMayLike";
 
 const SingleProduct = () => {
   const rightColumnRef = useRef(null);
@@ -148,16 +149,7 @@ const SingleProduct = () => {
 
         {/* <RelatedProducts products={products} /> */}
         <div className="mt-[20px]">
-          <h2 className="text-xl font-medium">You may also like</h2>
-          <div className="flex flex-row h-[400px] overflow-x-auto">
-            <div className="flex p-10 mt-[20px]">
-              {products.slice(0, 1).map((item) => (
-                <div key={item.id}>
-                  <FetchHeadphones product={item} />
-                </div>
-              ))}
-            </div>
-          </div>
+          <YouMayLike products={products} />
         </div>
       </Wrapper>
     </div>
