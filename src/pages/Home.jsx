@@ -1,15 +1,19 @@
 import { HeroBanner, Wrapper } from "../components";
 import FetchHeadphones from "../components/FetchHeadphones";
 import Fetchphone from "../components/Fetchphone";
-const Home = () => {
+import FooterBanner from "../components/FooterBanner";
+import PhonesCard from "../components/PhonesCard";
+import ProductsCard from "../components/ProductsCard";
+const Home = ({ bannerData }) => {
   return (
     <>
       <HeroBanner />
       <Wrapper>
-        <div>
-          <FetchHeadphones />
-          <Fetchphone />
-        </div>
+        <ProductsCard />
+      </Wrapper>
+      <FooterBanner />
+      <Wrapper>
+        <PhonesCard />
       </Wrapper>
     </>
   );

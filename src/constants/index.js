@@ -166,7 +166,7 @@ export const data = [
     name: "Beats Studio3 Wireless Noise Cancelling Over-Ear Headphones",
     rating: 2.5,
     price: 260,
-    image: "Beats Studio3 Wireless Noise Cancelling Over-Ear Headphones",
+    image: "https://m.media-amazon.com/images/I/61Xvn9KUgYL._AC_SX522_.jpg",
     company: "beats",
     description: `High-performance wireless noise cancelling headphones
     Compatible with iOS and Android devices.
@@ -185,7 +185,7 @@ export const data = [
         attributes: [
           {
             id: "1",
-            url: "https://m.media-amazon.com/images/I/81kqdeMHnCL._AC_SX466_.jpg",
+            url: "https://m.media-amazon.com/images/I/61Xvn9KUgYL._AC_SX522_.jpg",
             name: "Image 1",
           },
           {
