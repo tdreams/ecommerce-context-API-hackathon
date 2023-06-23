@@ -5,25 +5,25 @@ import Wrapper from "./Wrapper";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white pt-14 pb-3">
-      <Wrapper className="flex justify-between flex-col md:flex-row gap-[50px] md:gap-0">
+    <footer className="bg-black text-white  md:pt-14 pb-3">
+      <Wrapper className="flex justify-between flex-col md:flex-row gap-[50px] md:gap-0 ">
         {/* LEFT START */}
         <div className="flex gap-[50px] md:gap-[75px] lg:gap-[100px] flex-col md:flex-row">
           {/* MENU START */}
           <div className="flex flex-col gap-3 flex-1">
-            <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
+            <div className="font-oswald font-medium uppercase text-sm cursor-pointer hidden md:block">
               Find a store
             </div>
-            <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
+            <div className="font-oswald font-medium uppercase text-sm cursor-pointer hidden md:block">
               become a partner
             </div>
-            <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
+            <div className="font-oswald font-medium uppercase text-sm cursor-pointer hidden md:block">
               sign up for email
             </div>
-            <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
+            <div className="font-oswald font-medium uppercase text-sm cursor-pointer hidden md:block">
               send us feedback
             </div>
-            <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
+            <div className="font-oswald font-medium uppercase text-sm cursor-pointer hidden md:block">
               student discount
             </div>
           </div>
@@ -32,7 +32,7 @@ const Footer = () => {
           {/* NORMAL MENU START */}
           <div className="flex gap-[50px] md:gap-[75px] lg:gap-[100px] shrink-0">
             {/* MENU START */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col ml-3  md:gap-3 ">
               <div className="font-oswald font-medium uppercase text-sm">
                 get help
               </div>
@@ -55,7 +55,7 @@ const Footer = () => {
             {/* MENU END */}
 
             {/* MENU START */}
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col mb-4 mb:mb-0 gap-3">
               <div className="font-oswald font-medium uppercase text-sm">
                 About ShopCart
               </div>
@@ -79,7 +79,7 @@ const Footer = () => {
         {/* LEFT END */}
 
         {/* RIGHT START */}
-        <div className="flex gap-9 justify-center md:justify-center">
+        <div className="flex gap-3 md-gap-9 ml-12 md:ml-0 text-center md:justify-center mb-2">
           <div
             onClick={() => window.open("https://facebook.com", "_blank")}
             className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-white hover:bg-white/[0.5] cursor-pointer"
@@ -103,7 +103,7 @@ const Footer = () => {
       </Wrapper>
       <Wrapper className="flex justify-between mt-10 flex-col md:flex-row gap-[10px] md:gap-0">
         {/* LEFT START */}
-        <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer text-center md:m-10">
+        <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer text-center md:m-10 flex ml-10 md:ml-0">
           © 2023 ShopCart, Inc. All Rights Reserved
         </div>
         {/* LEFT END */}

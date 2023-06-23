@@ -39,7 +39,7 @@ const NavBar = () => {
     >
       <Wrapper classname="h-[60px] flex justify-between items-center ">
         <NavLink to="/">
-          <h2 className="font-bold text-lg">Shopcart</h2>
+          <h2 className="font-bold text-2xl">Shopcart</h2>
         </NavLink>
         <Menu showCatMenu={showCatMenu} setShowCatMenu={setShowCatMenu} />
 
