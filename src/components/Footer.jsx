@@ -10,7 +10,7 @@ const Footer = () => {
         {/* LEFT START */}
         <div className="flex gap-[50px] md:gap-[75px] lg:gap-[100px] flex-col md:flex-row">
           {/* MENU START */}
-          <div className="flex flex-col gap-3 shrink-0">
+          <div className="flex flex-col gap-3 flex-1">
             <div className="font-oswald font-medium uppercase text-sm cursor-pointer">
               Find a store
             </div>
@@ -79,7 +79,7 @@ const Footer = () => {
         {/* LEFT END */}
 
         {/* RIGHT START */}
-        <div className="flex gap-4 justify-center md:justify-start">
+        <div className="flex gap-9 justify-center md:justify-center">
           <div
             onClick={() => window.open("https://facebook.com", "_blank")}
             className="w-10 h-10 rounded-full bg-white/[0.25] flex items-center justify-center text-white hover:bg-white/[0.5] cursor-pointer"
@@ -103,13 +103,13 @@ const Footer = () => {
       </Wrapper>
       <Wrapper className="flex justify-between mt-10 flex-col md:flex-row gap-[10px] md:gap-0">
         {/* LEFT START */}
-        <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer text-center md:text-left">
+        <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer text-center md:m-10">
           © 2023 ShopCart, Inc. All Rights Reserved
         </div>
         {/* LEFT END */}
 
         {/* RIGHT START */}
-        <div className="flex gap-2 md:gap-5 text-center md:text-left flex-wrap justify-center">
+        {/* <div className="flex gap-2 md:gap-5 text-center md:text-left flex-wrap justify-center">
           <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer">
             Guides
           </div>
@@ -122,7 +122,7 @@ const Footer = () => {
           <div className="text-[12px] text-white/[0.5] hover:text-white cursor-pointer">
             Privacy Policy
           </div>
-        </div>
+        </div> */}
         {/* RIGHT END */}
       </Wrapper>
     </footer>
