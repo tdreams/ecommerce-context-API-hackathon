@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useCartContext } from "../context/cart_context";
+import { useNavigate } from "react-router-dom";
 import "../index.css";
 import Wrapper from "../components/Wrapper";
 import CartItem from "../components/CartItem";
 
 const Cart = () => {
   const { cart, clear, del } = useCartContext();
+  const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   // Calculate the total amount
   const total = cart.reduce((accumulator, product) => {
@@ -17,6 +20,22 @@ const Cart = () => {
       return accumulator + product.price * product.amount;
     }
   }, 0);
+
+  const handlePlaceOrder = () => {
+    // Perform any necessary logic for placing the order
+
+    // Open the modal
+    setIsModalOpen(true);
+    clear();
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleGoBack = () => {
+    navigate("/");
+  };
 
   return (
     <div className="w-full md:py-20">
@@ -61,8 +80,11 @@ const Cart = () => {
                   </div>
                 </div>
                 {/* BUTTON START */}
-                <button className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75">
-                  Checkout
+                <button
+                  className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
+                  onClick={handlePlaceOrder}
+                >
+                  Place Order
                 </button>
                 {/* BUTTON START */}
               </div>
@@ -82,8 +104,31 @@ const Cart = () => {
             <span className="text-center mt-4">Your cart is empty</span>
           </div>
         )}
+
+        {/* MODAL START */}
+        {isModalOpen && (
+          <div className="fixed inset-0 flex items-center justify-center z-50">
+            <div className="bg-white rounded-xl w-[320px] h-[332px] p-14 shadow flex flex-col  text-center">
+              <h2 className="text-lg w-full font-semibold mb-4">
+                Thanks for your order!
+              </h2>
+              <p>Your order has been placed.</p>
+              <button
+                className="px-4 py-2 mt-9 rounded-full bg-black text-white font-medium flex justify-center m-auto "
+                onClick={() => {
+                  closeModal();
+                  handleGoBack();
+                }}
+              >
+                Go Back
+              </button>
+            </div>
+          </div>
+        )}
+        {/* MODAL END */}
       </Wrapper>
     </div>
   );
 };
+
 export default Cart;

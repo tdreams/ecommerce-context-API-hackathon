@@ -49,7 +49,16 @@ const SingleProduct = () => {
     });
   };
 
-  const handleBuyNow = () => {};
+  const handleBuyNow = () => {
+    add(newItem.id, newItem.amount, newItem);
+    res(newItem.id);
+    navigate("/cart");
+    toast.success(`${newItem.name} added to cart!`, {
+      position: toast.POSITION.TOP_RIGHT,
+      className: "custom-toast-position",
+      theme: "dark",
+    });
+  };
 
   const handleScroll = () => {
     if (rightColumnRef.current) {
