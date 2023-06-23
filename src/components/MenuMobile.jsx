@@ -48,12 +48,11 @@ const MenuMobile = ({ showCatMenu, setShowCatMenu, setMobileMenu }) => {
               </li>
             ) : (
               <li className="py-4 px-5 border-b">
-                <NavLink
-                  hrefLang={item.url}
-                  onClick={() => setMobileMenu(false)}
-                >
-                  {item.name}
-                </NavLink>
+                {item.name === "Deals" ? (
+                  <NavLink to="/deals">{item.name}</NavLink>
+                ) : (
+                  <NavLink to={item.url}>{item.name}</NavLink>
+                )}
               </li>
             )}
           </React.Fragment>
