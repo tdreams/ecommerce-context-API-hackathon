@@ -5,12 +5,17 @@ import Wrapper from "../components/Wrapper";
 import CartItem from "../components/CartItem";
 
 const Cart = () => {
-  /* const { cart } = useGlobalContext(); */
-  const { amount, cart, clear, decProd, incProd, del } = useCartContext();
+  const { cart, clear, del } = useCartContext();
 
   // Calculate the total amount
   const total = cart.reduce((accumulator, product) => {
-    return accumulator + product.price * product.amount;
+    const discountedPrice =
+      product.price - product.price * (product.discount / 100);
+    if (product.discount) {
+      return accumulator + discountedPrice * product.amount;
+    } else {
+      return accumulator + product.price * product.amount;
+    }
   }, 0);
 
   return (
@@ -30,7 +35,9 @@ const Cart = () => {
               {/* CART ITEMS START */}
               <div className="flex-[2]">
                 <div className="text-lg font-bold">Cart Items</div>
-                <div className="w-[90%]">{<CartItem />}</div>
+                <div className="w-[90%]">
+                  <CartItem />
+                </div>
               </div>
               {/* CART ITEMS END */}
 
@@ -80,6 +87,3 @@ const Cart = () => {
   );
 };
 export default Cart;
-
-{
-}

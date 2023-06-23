@@ -2,18 +2,19 @@ import { HeroBanner, Wrapper } from "../components";
 import FetchHeadphones from "../components/FetchHeadphones";
 import Fetchphone from "../components/Fetchphone";
 import FooterBanner from "../components/FooterBanner";
-import PhonesCard from "../components/PhonesCard";
+import PhoneCard from "../components/PhoneCard";
 import ProductsCard from "../components/ProductsCard";
-const Home = ({ bannerData }) => {
+
+const Home = () => {
   return (
     <>
       <HeroBanner />
       <Wrapper>
-        <ProductsCard />
+        <ProductsCard currentPage="headphones" />
       </Wrapper>
       <FooterBanner />
       <Wrapper>
-        <PhonesCard />
+        <PhoneCard currentPage="phones" />
       </Wrapper>
     </>
   );

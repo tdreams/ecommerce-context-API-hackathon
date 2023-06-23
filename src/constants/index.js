@@ -1,12 +1,81 @@
 export const navMenu = [
   { id: 1, name: "Categories", subMenu: true },
   { id: 2, name: "Deals", url: "/" },
-  { id: 3, name: "What's New", url: "/" },
 ];
 
 export const subMenuNav = [
   { id: 1, name: "Headphones", doc_count: 11 },
   { id: 2, name: "Phones", doc_count: 8 },
+];
+
+export const reviews = [
+  {
+    id: 1,
+    name: "John Doe",
+    rating: 4.5,
+    date: "October 8, 2022",
+    avatar:
+      "https://images.unsplash.com/photo-1599566150163-29194dcaad36?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0Mzc0NDd8MHwxfHNlYXJjaHw0fHxhdmF0YXJ8ZW58MHx8fHwxNjg3NDQ1NjYwfDA&ixlib=rb-4.0.3&q=85&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450",
+    title: "Great product! I highly recommend it.",
+    comment:
+      "Wow! I'm glad to hear that this product is excellent and highly recommended. It's always great to find products that exceed expectations and leave a positive impression. Thank you for sharing your feedback!",
+  },
+  {
+    id: 2,
+    name: "Jane Smith",
+    rating: 5,
+    date: "Jan 20, 2023",
+    avatar:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0Mzc0NDd8MHwxfHNlYXJjaHwyfHxhdmF0YXJ8ZW58MHx8fHwxNjg3NDQ1NjYwfDA&ixlib=rb-4.0.3&q=85&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450",
+    title: "Excellent quality and fast shipping.",
+    comment:
+      "It's wonderful to hear that this product offers excellent quality and comes with fast shipping. Quality and speed are important factors when making a purchase, and it's great to know that this product excels in both aspects. Thank you for sharing your experience with us!",
+  },
+  {
+    id: 3,
+    name: "Michael Johnson",
+    date: "Dec 18, 2022",
+    rating: 3.5,
+    avatar:
+      "https://images.unsplash.com/photo-1542065435-d6bc2eac3377?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0Mzc0NDd8MHwxfHNlYXJjaHw2OHx8YXZhdGFyfGVufDB8fHx8MTY4NzQwMTc1Nnww&ixlib=rb-4.0.3&q=85&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450",
+    title: "Decent product but a bit overpriced.",
+    comment:
+      "This product is decent, but it seems to be a bit overpriced. While it may have some positive aspects, the pricing might not fully align with the overall value provided. It's important to consider both the quality and affordability when making a purchase decision. Thank you for sharing your perspective on this product!",
+  },
+  {
+    id: 4,
+    name: "Ben TheNotice",
+    date: "Jun 22, 2023",
+    rating: 3,
+    avatar:
+      "https://images.unsplash.com/photo-1566492031773-4f4e44671857?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0Mzc0NDd8MHwxfHNlYXJjaHwxOHx8YXZhdGFyfGVufDB8fHx8MTY4NzQ0NTY2MHww&ixlib=rb-4.0.3&q=85&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450",
+    title: "",
+    comment:
+      "I could write a book on my experience with these, I'm an audiophile who spends most of my time immersed in 'music and sound like' stuff, to put it mildly - I'd also like to add that I am a self-admitted Apple and AppleEcosystem fan, through and through - so these APPs already had the 'edge' going into the foray of TWS earbud shopping.",
+  },
+  {
+    id: 5,
+    rating: 2,
+    name: "AntiAmazon",
+    date: "Sep 1, 2023",
+    avatar:
+      "https://images.unsplash.com/photo-1542384701-c0e46e0eda04?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0Mzc0NDd8MHwxfHNlYXJjaHwxNjh8fGF2YXRhcnxlbnwwfHx8fDE2ODc0MDE3Njh8MA&ixlib=rb-4.0.3&q=85&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450",
+    title: "Not very impressed with this product. It could be better.",
+    comment:
+      "I must say that I'm not very impressed with this product. It didn't meet my expectations, and I feel that there is room for improvement. It's disappointing when a product falls short, especially when considering its potential. I hope the manufacturer takes customer feedback into account and works towards making it better. Thank you for sharing your honest opinion about this product.",
+  },
+  {
+    id: 6,
+    rating: 1,
+    name: "PlusJamais",
+    date: "Oct 2, 2023",
+    avatar:
+      "https://images.unsplash.com/photo-1668000175007-955225a2d1c9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0Mzc0NDd8MHwxfHNlYXJjaHw0OHx8bWFuZ2FzfGVufDB8fHx8MTY4NzQ2Mjg3NHww&ixlib=rb-4.0.3&q=85&q=85&fmt=jpg&crop=entropy&cs=tinysrgb&w=450",
+    title:
+      "Very disappointed with the product. It didn't meet my expectations at all.",
+    comment:
+      "I am extremely disappointed with this product. It didn't meet my expectations at all, and it's quite disheartening. When we invest in a product, we hope for it to fulfill its promises and deliver the desired results. Unfortunately, this product fell short in every aspect, leaving me unsatisfied. I would advise others to approach it with caution. Thank you for allowing me to share my disappointment regarding this product.",
+  },
 ];
 
 export const data = [
@@ -44,13 +113,35 @@ export const data = [
           },
           {
             id: "4",
-            url: "https://m.media-amazon.com/images/I/51lEdIxlNDL._AC_SX466_.jpg)",
+            url: "https://m.media-amazon.com/images/I/71llQwico7L._AC_SX342_.jpg",
             name: "Image 4",
           },
           {
             id: "5",
             url: "https://m.media-amazon.com/images/I/51OoKCakCfL._AC_SX466_.jpg",
             name: "Image 5",
+          },
+        ],
+        details: [
+          {
+            id: "1",
+            url: "https://www.patentlyapple.com/.a/6a0120a5580826970c0240a4c01466200d-pi",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://www.patentlyapple.com/.a/6a0120a5580826970c0240a4e4be9e200b-pi",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://www.patentlyapple.com/.a/6a0120a5580826970c0240a496dd50200c-800wi",
+            name: "Image 3",
+          },
+          {
+            id: "4",
+            url: "https://m.media-amazon.com/images/G/01/apple/AirPods_Pro_Desktop_01._CB628521981_.jpg",
+            name: "Image 4",
           },
         ],
       },
@@ -107,6 +198,30 @@ export const data = [
             name: "Image 5",
           },
         ],
+        details: [
+          {
+            id: "1",
+            url: "https://m.media-amazon.com/images/G/01/appcore/beats/Studio3-Update_01._CB646065411_.jpg",
+            url2: "https://m.media-amazon.com/images/G/01/appcore/beats/Studio3-Update_02._CB646065411_.jpg",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://m.media-amazon.com/images/G/01/appcore/beats/Studio3-Update_03._CB646065411_.jpg",
+            url2: "https://m.media-amazon.com/images/G/01/appcore/beats/Studio3-Update_04._CB646065411_.jpg",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://m.media-amazon.com/images/G/01/appcore/beats/Studio3-Update_05._CB646065411_.jpg",
+            name: "Image 3",
+          },
+          {
+            id: "4",
+            url: "https://m.media-amazon.com/images/G/01/appcore/beats/Studio3-Update_06._CB646065411_.jpg",
+            name: "Image 4",
+          },
+        ],
       },
     ],
   },
@@ -153,8 +268,25 @@ export const data = [
           },
           {
             id: "5",
-            url: "https://m.media-amazon.com/images/I/61NAwJD-h7L._AC_SX569_.jpg",
+            url: "https://m.media-amazon.com/images/I/71+q+odO-cL._AC_SX569_.jpg",
             name: "Image 5",
+          },
+        ],
+        details: [
+          {
+            id: "1",
+            url: "https://m.media-amazon.com/images/S/aplus-media/vc/17da4e0e-6ecb-4e36-83f7-8e90ade2b5e8.__CR0,153,1464,600_PT0_SX1464_V1___.jpg",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://m.media-amazon.com/images/S/aplus-media/vc/a67369d9-a33a-42ed-8c4d-5ded9b937f56.__CR0,282,1464,600_PT0_SX1464_V1___.jpg",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://m.media-amazon.com/images/S/aplus-media/vc/cbc4b656-530e-4912-b06d-238f6085fac9.__CR0,153,1464,600_PT0_SX1464_V1___.jpg",
+            name: "Image 3",
           },
         ],
       },
@@ -500,6 +632,127 @@ export const data = [
           {
             id: "4",
             url: "https://m.media-amazon.com/images/I/81nTYvWJSgL._AC_SX425_.jpg",
+            name: "Image 4",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "recZkNf2kwmdBcq19",
+    name: "JBL Live 460NC - Wireless On-Ear Noise Cancelling Headphones with Long Battery Life and Voice Assistant Control - Black",
+    rating: 4.5,
+    price: 100,
+    discount: 20,
+    image: "https://m.media-amazon.com/images/I/61Kq-Pz8d-L._AC_SX425_.jpg",
+    company: "JBL",
+    description: `he JBL Live 460NC wireless headphones feature 40mm drivers and a sound signature that can be found in the most famous venues all around the world.
+    Keep the noise away and stay focused on the music with Adaptive Noise Cancelling. The Ambient Aware technology allows you to safely walk busy streets by increasing ambient sounds, while with TalkThru music is lowered and speech is amplified so you can easily chat keeping your headphones on.
+    Get help from your preferred voice assistant using your voice or with a tap on the earcup. Activate Nose Cancelling or Ambient Aware, check the battery life or power off your JBL Live 460NC simply with your voice. Use the all-new JBL App to easily set your preferred voice assistants.
+    Stay in touch with your world by managing calls with the buttons on the ear-cup. The mic technology allows for perfect stereo calls.
+    Rock on for up to 50 hours (or up to 40 hours with ANC and BT on). Then, stop for a quick 10-minute charge to get extra 4-hour fun.
+    What's Included: JBL LIVE 460NC headphone, audio cable, USB-C cable, QSG
+    Android 6.0 or higher is required for full access to Alexa features when using this device`,
+    category: "Headphones",
+    shipping: true,
+    amount: 1,
+    stock: 14,
+    color: ["White", "Black", "Ice Blue"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
+            url: "https://m.media-amazon.com/images/I/61-pTDmV-ZL._AC_SX425_.jpg",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://m.media-amazon.com/images/I/61HhjfiSSyL._AC_SX425_.jpg",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://m.media-amazon.com/images/I/61mYI32aWVL._AC_SX425_.jpg",
+            name: "Image 3",
+          },
+          {
+            id: "4",
+            url: "https://m.media-amazon.com/images/I/71Zzo4p11uL._AC_SX425_.jpg",
+            name: "Image 4",
+          },
+          {
+            id: "4",
+            url: "https://m.media-amazon.com/images/I/61TH4l5h1yL._AC_SX425_.jpg",
+            name: "Image 5",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "recZkNf2kwmdcds19",
+    name: "Nirvanaa 751 ANC Wireless Headphone",
+    rating: 4.7,
+    price: 100,
+    discount: 42,
+    image:
+      "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_b6563f96-f1a1-4915-b686-d4e37232ec3c_600x.png?v=1685707922",
+    company: "Nirvanaa",
+    description: `Live the #SoundThatMatters with boAt Nirvanaa 751 ANC. We believe that to experience better sound, we need better silence. Its Hybrid Active Noise Cancellation fights noise decibels up to 33 dB so you can completely immerse into your rhythm whenever you need. And when you don’t, Ambient Mode ensures you’re aware of your environment while you enjoy your music. All of this with a massive playback time of 65 hours, so there’s no stop to your grooving. Powered by boAt Signature Sound and 40mm Drivers, you’ll enter a world of audio bliss every time you plug in.`,
+    category: "Headphones",
+    shipping: true,
+    amount: 1,
+    stock: 14,
+    color: ["White", "Black", "Ice Blue"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
+            url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/img1_bd0c960e-e25b-43a4-b63c-4b044b5b0feb.png?v=1643878658",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/61u81pV72AL._SY450_60x.jpg?v=1685707757",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/71w3s2UJNlL._SY450_450x.jpg?v=1685707756",
+            name: "Image 3",
+          },
+          {
+            id: "4",
+            url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/71sI3x7ZkyL._SY450_450x.jpg?v=1685707756",
+            name: "Image 4",
+          },
+          {
+            id: "4",
+            url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/81nMx6cWJJL._SY450_450x.jpg?v=1685707757",
+            name: "Image 5",
+          },
+        ],
+        details: [
+          {
+            id: "1",
+            url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/img1_bd0c960e-e25b-43a4-b63c-4b044b5b0feb.png?v=1643878658",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/img2_6db82b24-3b16-428d-b762-08c010aec1df.png?v=1643879576",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/img3_1d1975df-de2d-4049-ab5d-18da8dcd5a1c.png?v=1643881040",
+            name: "Image 3",
+          },
+          {
+            id: "4",
+            url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/img9_90f0b98f-9c84-46eb-bc6b-e407c3f71376.png?v=1643883432",
             name: "Image 4",
           },
         ],

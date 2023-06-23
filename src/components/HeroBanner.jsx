@@ -37,12 +37,14 @@ const HeroBanner = () => {
                   Shop now
                 </button>
               </div>
-              <button
-                type="button"
-                className="bg-black text-white px-6 py-3 mt-8 rounded-sm font-medium hover:bg-opacity-90 hidden md:block"
-              >
-                Shop now
-              </button>
+              <NavLink to="/headphones/recZkNf2kwmdBcq19">
+                <button
+                  type="button"
+                  className="bg-black text-white px-6 py-3 mt-8 rounded-sm font-medium hover:bg-opacity-90 hidden md:block"
+                >
+                  Shop now
+                </button>
+              </NavLink>
               <div className=" absolute -top-12 lg:top-0 md:top-1 right-0 lg:right-[15%]">
                 <img
                   src="/headphoneHero.webp"

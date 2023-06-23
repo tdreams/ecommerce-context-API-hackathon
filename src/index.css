@@ -82,38 +82,12 @@ body {
   }
 }
 
-/* nav .nav-bar {
-  display: flex;
-
-  height: 3rem;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--primary-color);
-} */
-/* .nav-bar .logo {
-  padding-left: 2rem;
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--light-blue);
-} */
-/* nav ul {
-  display: flex;
-  padding-right: 2rem;
-  gap: 2rem;
-  list-style: none;
-} */
-/* nav a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: 500;
+.custom-toast-position {
+  top: calc(
+    60px + 1rem
+  ); /* Adjust the top value based on your navbar's height */
+  right: 1rem; /* Adjust the right value as needed */
 }
- */
-/* nav a:active,
-nav a:focus {
-  color: #fff;
-  transition: all 0.25s ease-in-out;
-}
- */
 
 .btn {
   @apply rounded-md py-3 px-[6.2rem] text-xs font-bold  tracking-wider;

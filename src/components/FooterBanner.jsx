@@ -1,5 +1,6 @@
 import React from "react";
 import Wrapper from "./Wrapper";
+import { NavLink } from "react-router-dom";
 
 const FooterBanner = ({}) => {
   return (
@@ -31,28 +32,32 @@ const FooterBanner = ({}) => {
             The award-winning sound and design you’ve come to love from Beats.
           </p>
           <div className="">
-            <button
-              type="button"
-              className="bg-white text-black px-6 py-3 mt-4 rounded-smfont-medium hover:bg-opacity-90 "
-            >
-              Shop now
-            </button>
+            <NavLink to="/headphones/recZkNf2kwmdcds19">
+              <button
+                type="button"
+                className="bg-white text-black px-6 py-3 mt-4 rounded-smfont-medium hover:bg-opacity-90 "
+              >
+                Shop now
+              </button>
+            </NavLink>
           </div>
         </div>
 
         <div className="font-bold text-xl leading-3 mr-[10px] mt-24 z-50 hidden md:block">
-          <p className="text-lg">Beats by Dre</p>
+          <p className="text-lg">Beats</p>
           <h3 className="font-black text-6xl  uppercase">Best Deal</h3>
           <p className="text-lg w-80">
             The award-winning sound and design you’ve come to love from Beats.
           </p>
           <div className="">
-            <button
-              type="button"
-              className="bg-white text-black px-6 py-3 mt-8 rounded-smfont-medium hover:bg-opacity-90 "
-            >
-              Shop now
-            </button>
+            <NavLink to="/headphones/recZkNf2kwmdcds19">
+              <button
+                type="button"
+                className="bg-white text-black px-6 py-3 mt-8 rounded-smfont-medium hover:bg-opacity-90 "
+              >
+                Shop now
+              </button>
+            </NavLink>
           </div>
         </div>
       </div>

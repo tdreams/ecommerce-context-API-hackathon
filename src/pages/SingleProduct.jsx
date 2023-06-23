@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { NavLink, Navigate, useLocation, useNavigate } from "react-router-dom";
 import ProductCarroussel from "../components/ProductCarroussel";
 import { Wrapper } from "../components";
 import { useCartContext } from "../context/cart_context";
@@ -12,10 +13,12 @@ import {
   AiFillStar,
   AiOutlineStar,
 } from "react-icons/ai";
+import { FaChevronLeft } from "react-icons/fa";
 import ProductRating from "../components/ProductRating";
 import FetchHeadphones from "../components/FetchHeadphones";
 import YouMayLike from "../components/YouMayLike";
-
+import Review from "../components/Review";
+import { reviews } from "../constants";
 const SingleProduct = () => {
   const rightColumnRef = useRef(null);
   const [isSticky, setIsSticky] = useState(false);
@@ -40,10 +43,13 @@ const SingleProduct = () => {
     add(newItem.id, newItem.amount, newItem);
     res(newItem.id);
     toast.success(`${newItem.name} added to cart!`, {
-      position: toast.POSITION.MIDDLE_CENTER,
+      position: toast.POSITION.TOP_RIGHT,
+      className: "custom-toast-position",
       theme: "dark",
     });
   };
+
+  const handleBuyNow = () => {};
 
   const handleScroll = () => {
     if (rightColumnRef.current) {
@@ -51,21 +57,38 @@ const SingleProduct = () => {
       setIsSticky(top <= 0);
     }
   };
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [previousPath, setPreviousPath] = useState(null);
 
   useEffect(() => {
+    setPreviousPath(location.pathname);
     handleScroll();
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [location.pathname]);
 
   const rightColumnClasses = isSticky ? "scrollable" : "";
+  const goBack = () => {
+    navigate(-1);
+  };
+  const discountedPrice =
+    newItem.price - newItem.price * (newItem.discount / 100);
 
   return (
     <div className="w-full md:py-20">
       <Wrapper>
+        <div>
+          <button
+            className="mb-4 font-semibold flex items-center"
+            onClick={goBack}
+          >
+            <FaChevronLeft /> Go back
+          </button>
+        </div>
         <div className="flex flex-col lg:flex-row md:px-10 gap-[50px] lg:gap-[100px]">
           {/* left column start */}
           <div className="w-full md:w-auto flex-[1.5] max-w-[500px] lg:max-w-full mx-auto lg:mx-0 lg:sticky lg:top-0">
@@ -93,19 +116,25 @@ const SingleProduct = () => {
 
             {/* PRODUCT PRICE */}
             <div className="flex items-center">
-              <p className="mr-2 text-xl font-semibold">$ {newItem.price}</p>
-            </div>
-
-            <div className="text-md font-medium text-black/[0.5]">
-              incl. of taxes
-            </div>
-            <div className="text-md font-medium text-black/[0.5] mb-20">
-              {`(Also includes all applicable duties)`}
+              {newItem.discount ? (
+                <div className="mr-2">
+                  <p className="text-xl font-semibold text-gray-400 line-through">
+                    $ {newItem.price.toFixed(2)}
+                  </p>
+                  <p className="text-xl font-bold text-red-500">
+                    {newItem.discount}% OFF - ${discountedPrice.toFixed(2)}
+                  </p>
+                </div>
+              ) : (
+                <p className="mr-2 text-xl font-bold">
+                  $ {newItem.price.toFixed(2)}
+                </p>
+              )}
             </div>
 
             {/* QUANTITY START */}
             <div className="flex gap-[20px] justify-between items-center mb-10">
-              <h3>Quantity</h3>
+              <h3 className="font-bold text-lg">Quantity</h3>
               <p className="border-[1px] p-[6px] flex items-center">
                 <button
                   onClick={handleDecQuantiy}
@@ -128,12 +157,22 @@ const SingleProduct = () => {
 
             <ToastContainer />
             {/* ADD TO CART BUTTON START */}
-            <button
-              className="w-full py-4 rounded-full bg-black text-white text-lg font-medium active:scale-95 mb-10 hover:scale-[1.1]  transition-all"
-              onClick={handleAddToCart}
-            >
-              Add to Cart
-            </button>
+            <div>
+              <button
+                className="w-full py-4 rounded-full bg-black text-white text-lg font-medium active:scale-95 mb-4 hover:scale-[1.1]  transition-all"
+                onClick={handleAddToCart}
+              >
+                Add to Cart
+              </button>
+
+              <button
+                className="w-full py-4 rounded-full bg-white text-black text-lg font-medium active:scale-95 mb-10 hover:scale-[1.1]  transition-all border border-black"
+                onClick={handleBuyNow}
+              >
+                Buy Now
+              </button>
+            </div>
+
             {/* ADD TO CART BUTTON END */}
 
             <div>
@@ -147,10 +186,48 @@ const SingleProduct = () => {
           {/* right column end */}
         </div>
 
-        {/* <RelatedProducts products={products} /> */}
+        {/* Start RelatedProduct  */}
         <div className="mt-[20px]">
           <YouMayLike products={products} />
         </div>
+        {/* End RelatedProduct */}
+
+        {/* Start Image products details  */}
+        {newItem.images &&
+          newItem.images[0].details &&
+          newItem.images[0].details.length > 0 && (
+            <div>
+              {newItem.images[0].details.map((image, index) => (
+                <div key={index} className="my-4 object-contain">
+                  <img
+                    src={image.url}
+                    alt={`Product Detail ${index + 1}`}
+                    className="my-0 object-fill"
+                  />
+                  {image.url2 && (
+                    <img src={image.url2} alt="" className="my-0" />
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+        {/* End Image Details Product */}
+        {/* REVIEWS START */}
+        <div className="border-t py-6">
+          <h3 className="text-lg font-semibold mb-4">Reviews</h3>
+          {reviews.map((review) => (
+            <Review
+              key={review.id}
+              name={review.name}
+              rating={review.rating}
+              title={review.title}
+              comment={review.comment}
+              date={review.date}
+              avatar={review.avatar}
+            />
+          ))}
+        </div>
+        {/* REVIEWS END */}
       </Wrapper>
     </div>
   );

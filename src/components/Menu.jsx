@@ -6,6 +6,7 @@ import { useGlobalContext } from "../context/context";
 
 const Menu = ({ showCatMenu, setShowCatMenu }) => {
   const { products } = useGlobalContext();
+
   return (
     <ul className="hidden md:flex items-center gap-8 font-medium text-black">
       {navMenu.map((item) => {
@@ -27,8 +28,8 @@ const Menu = ({ showCatMenu, setShowCatMenu }) => {
                       ).length;
                       return (
                         <NavLink
+                          to={`/${submenu.name}`}
                           key={submenu.id}
-                          to="/"
                           onClick={setShowCatMenu(true)}
                         >
                           <li className="h-12 flex justify-between items-center px-3 hover:bg-black/[0.03] rounded-md">
@@ -43,7 +44,11 @@ const Menu = ({ showCatMenu, setShowCatMenu }) => {
               </li>
             ) : (
               <li className="cursor-pointer">
-                <NavLink hrefLang={item.url}>{item.name}</NavLink>
+                {item.name === "Deals" ? (
+                  <NavLink to="/deals">{item.name}</NavLink>
+                ) : (
+                  <NavLink to={item.url}>{item.name}</NavLink>
+                )}
               </li>
             )}
           </React.Fragment>

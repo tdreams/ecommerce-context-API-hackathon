@@ -26,7 +26,7 @@ export const responsive = {
 export const CustomLeftArrow = ({ onClick, ...rest }) => {
   return (
     <button
-      className="absolute left-0 top-0 text-3xl"
+      className="absolute -left-0 top-1/3 text-3xl"
       onClick={() => onClick()}
     >
       <FaChevronLeft />
@@ -37,7 +37,7 @@ export const CustomLeftArrow = ({ onClick, ...rest }) => {
 export const CustomRightArrow = ({ onClick, ...rest }) => {
   return (
     <button
-      className="absolute right-0 top-0 text-3xl"
+      className="absolute right-0 top-1/3 text-3xl"
       onClick={() => onClick()}
     >
       <FaChevronRight />

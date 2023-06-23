@@ -36,7 +36,7 @@ const reducer = (state, action) => {
 
 const initialState = {
   products: data,
-  amount: 10,
+  amount: 0,
 };
 const ProductProvider = ({ children }) => {
   /* const [cart, setCart] = useState([]);

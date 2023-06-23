@@ -23,6 +23,23 @@ const YouMayLike = ({ products }) => {
     (product) => product.category === category
   );
 
+  const formatPrice = (price, discount) => {
+    if (discount) {
+      const discountedPrice = price - price * (discount / 100);
+      return (
+        <div className="flex items-center gap-2">
+          <p className="text-sm text-gray-400 line-through ">
+            ${price.toFixed(2)}
+          </p>
+          <p className="text-sm font-semibold text-red-500">
+            ${discountedPrice.toFixed(2)}
+          </p>
+        </div>
+      );
+    }
+    return <p className="text-sm font-semibold">${price.toFixed(2)}</p>;
+  };
+
   return (
     <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
       <h2 className="text-2xl font-bold tracking-tight text-gray-900">
@@ -32,7 +49,6 @@ const YouMayLike = ({ products }) => {
       <Carousel
         customLeftArrow={<CustomLeftArrow />}
         customRightArrow={<CustomRightArrow />}
-        centerMode={true}
         responsive={responsive}
         containerClass="-mx-[10px] "
         itemClass="mr-[30px]"
@@ -59,16 +75,14 @@ const YouMayLike = ({ products }) => {
                           aria-hidden="true"
                           className="absolute inset-0"
                         ></span>
-                        {product.name.slice(0, 20).concat("...")}
+                        {product.name.slice(0, 15).concat("...")}
                       </a>
                     </h3>
-                    <p className="mt-1 text-sm text-gray-500">
+                    <p className="text-sm text-gray-500">
                       <ProductRating rating={product.rating} />
                     </p>
                   </div>
-                  <p className="text-sm font-medium text-gray-900">
-                    ${product.price}
-                  </p>
+                  <div>{formatPrice(product.price, product.discount)}</div>
                 </div>
               </NavLink>
             </div>
