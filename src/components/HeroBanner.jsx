@@ -30,12 +30,14 @@ const HeroBanner = () => {
                 </h1>
               </div>
               <div className="absolute bottom-11 right-[35%] md:hidden ">
-                <button
-                  type="button"
-                  className="bg-black text-white px-6 py-3 mt-8 rounded-smfont-medium hover:bg-opacity-90 "
-                >
-                  Shop now
-                </button>
+                <NavLink to="/headphones/recZkNf2kwmdBcq19">
+                  <button
+                    type="button"
+                    className="bg-black text-white px-6 py-3 mt-8 rounded-smfont-medium hover:bg-opacity-90 "
+                  >
+                    Shop now
+                  </button>
+                </NavLink>
               </div>
               <NavLink to="/headphones/recZkNf2kwmdBcq19">
                 <button
