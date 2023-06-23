@@ -32,12 +32,12 @@ const HeroBanner = () => {
                   Cool
                 </h1>
               </div>
-              <div className="absolute bottom-11 right-[35%] md:hidden ">
+              <div className="absolute bottom-11 right-[35%] md:hidden z-[100]">
                 <button
                   onClick={handleClickButton}
                   className="bg-black text-white px-6 py-4 mt-8 rounded-smfont-medium "
                 >
-                  Shop now
+                  <p>Shop now</p>
                 </button>
               </div>
 
