@@ -1,10 +1,13 @@
 import React from "react";
 import Wrapper from "./Wrapper";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { BiArrowBack } from "react-icons/bi";
 const HeroBanner = () => {
+  const navigate = useNavigate();
+  const handleClickButton = () => navigate("/headphones/recZkNf2kwmdBcq19");
+
   return (
     <>
       <div className="">
@@ -30,23 +33,22 @@ const HeroBanner = () => {
                 </h1>
               </div>
               <div className="absolute bottom-11 right-[35%] md:hidden ">
-                <NavLink to="/headphones/recZkNf2kwmdBcq19">
-                  <button
-                    type="button"
-                    className="bg-black text-white px-6 py-3 mt-8 rounded-smfont-medium hover:bg-opacity-90 "
-                  >
-                    Shop now
-                  </button>
-                </NavLink>
-              </div>
-              <NavLink to="/headphones/recZkNf2kwmdBcq19">
                 <button
-                  type="button"
-                  className="bg-black text-white px-6 py-3 mt-8 rounded-sm font-medium hover:bg-opacity-90 hidden md:block"
+                  onClick={handleClickButton}
+                  className="bg-black text-white px-6 py-4 mt-8 rounded-smfont-medium "
                 >
                   Shop now
                 </button>
-              </NavLink>
+              </div>
+
+              <button
+                type="button"
+                className="bg-black text-white px-6 py-3 mt-8 rounded-sm font-medium hover:bg-opacity-90 hidden md:block"
+                onClick={handleClickButton}
+              >
+                Shop now
+              </button>
+
               <div className=" absolute -top-12 lg:top-0 md:top-1 right-0 lg:right-[15%]">
                 <img
                   src="/headphoneHero.webp"
