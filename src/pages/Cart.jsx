@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
 import { useCartContext } from "../context/cart_context";
 import "../index.css";
@@ -6,6 +7,9 @@ import Wrapper from "../components/Wrapper";
 import CartItem from "../components/CartItem";
 
 const Cart = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const [previousPath, setPreviousPath] = useState(null);
   const [loading, setLoading] = useState(false);
   const { cart, clear } = useCartContext();
   const [stripe, setStripe] = useState(null);
@@ -30,7 +34,13 @@ const Cart = () => {
 
     fetchStripe();
   }, []);
+  useEffect(() => {
+    setPreviousPath(location.pathname);
+  }, [location.pathname]);
 
+  const goBack = () => {
+    navigate(-1);
+  };
   const handleCheckout = async () => {
     setLoading(true);
 
@@ -46,7 +56,7 @@ const Cart = () => {
         lineItems,
         mode: "payment",
         successUrl: `${window.location.origin}/success`, // Add success URL parameter
-        cancelUrl: `${window.location.origin}/cancel`, // Replace with your cancel URL
+        cancelUrl: window.location.origin + previousPath, // Replace with your cancel URL
       });
     } catch (error) {
       console.error("Error:", error);
