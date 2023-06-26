@@ -205,7 +205,7 @@ const SingleProduct = () => {
         {newItem.images &&
           newItem.images[0].details &&
           newItem.images[0].details.length > 0 && (
-            <div>
+            <div className="flex flex-col w-full items-center">
               {newItem.images[0].details.map((image, index) => (
                 <div key={index} className="my-4 object-contain">
                   <img

@@ -1,6 +1,6 @@
 export const navMenu = [
   { id: 1, name: "Categories", subMenu: true },
-  { id: 2, name: "Deals", url: "/" },
+  { id: 2, name: "Deals" },
 ];
 
 export const subMenuNav = [
@@ -84,6 +84,7 @@ export const data = [
     name: "Apple AirPods Pro (2nd Generation) Wireless Earbuds",
     rating: 4.5,
     price: 200,
+    apiId: "price_1NN32JLr0d3cfpotfWCIsygi",
     image: "https://m.media-amazon.com/images/I/61f1YfTkTDL._AC_SX466_.jpg",
     company: "Apple",
     description:
@@ -153,6 +154,7 @@ export const data = [
     name: "Beats Studio3 Wireless Noise Cancelling Over-Ear Headphones",
     rating: 3.5,
     price: 169,
+    apiId: "price_1NN33bLr0d3cfpotHKJgckTj",
     image: "https://m.media-amazon.com/images/I/51-+O3-wFxL._AC_SX466_.jpg",
     company: "Beats",
     description: `High-performance wireless noise cancelling headphones
@@ -231,6 +233,7 @@ export const data = [
     name: "JBL GO2 - Waterproof Ultra Portable Bluetooth Speaker - Red",
     rating: 4.7,
     price: 22,
+    apiId: "price_1NMmOeLr0d3cfpotBiAlhALR",
     image: "https://m.media-amazon.com/images/I/81dTwUOdPmL._AC_SX569_.jpg",
     company: "JBL",
     description: `Wireless Bluetooth Streaming
@@ -298,6 +301,7 @@ export const data = [
     name: "Beats Studio3 Wireless Noise Cancelling Over-Ear Headphones",
     rating: 2.5,
     price: 260,
+    apiId: "price_1NN34VLr0d3cfpotdpkIA0F5",
     image: "https://m.media-amazon.com/images/I/61Xvn9KUgYL._AC_SX522_.jpg",
     company: "beats",
     description: `High-performance wireless noise cancelling headphones
@@ -350,6 +354,7 @@ export const data = [
     name: "Beats Flex Wireless Earbuds – Apple W1 Headphone Chip",
     rating: 4.4,
     price: 50,
+    apiId: "price_1NN36ZLr0d3cfpotoQQEbu2U",
     image: "https://m.media-amazon.com/images/I/61WT1dcszdL._AC_SX466_.jpg",
     company: "Beats",
     description: `BATTERY LIFE - Up to 12 hours of listening time
@@ -405,6 +410,7 @@ export const data = [
     name: "BD&M Wireless Earbuds, Bluetooth Gaming Earbuds Wireless Headphones",
     rating: 2.5,
     price: 10,
+    apiId: "price_1NN38ELr0d3cfpotG072QPPn",
     image: "https://m.media-amazon.com/images/I/61fko5NDVAL._AC_SX425_.jpg",
     company: "BD&M",
     description: `One Step Pairing Technology and LED Battery Display】 Open the charging case and you can automatically and seamlessly pair this device with your Bluetooth-Compatible device without any problem. You don't need any skills to use Bluetooth-Compatible earbuds. After a few seconds, you will enter the world of pleasant music. You don't need to open the app to see the power of the headset. The LED battery shows that it can show the charge level of the headset.`,
@@ -451,6 +457,7 @@ export const data = [
     name: "Apple iPhone 14 Pro Max, 128GB, Space Black - Unlocked",
     rating: 5,
     price: 1200,
+    apiId: "price_1NN3BpLr0d3cfpotU7VTqJFw",
     image: "https://m.media-amazon.com/images/I/51uD1lmrV8L._AC_SX679_.jpg",
     company: "Apple",
     description: `Unlocked
@@ -491,6 +498,7 @@ export const data = [
     name: "SAMSUNG Galaxy A54 5G A Series Cell Phone, Factory Unlocked Android Smartphone, 128GB w/ 6.4”",
     rating: 4.8,
     price: 400,
+    apiId: "price_1NN3CHLr0d3cfpotMEqwtKyU",
     image:
       "https://m.media-amazon.com/images/I/61MEp5HIdBL.__AC_SX300_SY300_QL70_FMwebp_.jpg",
     company: "Samsung",
@@ -545,6 +553,7 @@ export const data = [
     name: "SAMSUNG Galaxy A23 5G A Series Cell Phone, Factory Unlocked Android Smartphone, 64GB,",
     rating: 4.2,
     price: 200,
+    apiId: "price_1NN3CsLr0d3cfpotbLardbDC",
     image: "https://m.media-amazon.com/images/I/81AR3K-lOFL._AC_SX425_.jpg",
     company: "Samsung",
     description: `HIGH RESOLUTION CAMERA: A wide lens camera captures the finest of details, making it easy to capture every family gathering; Plus, Advanced Portrait mode ups your photo game by automatically focusing on people and blurring the background.Form_factor : Bar.Other camera description:Front,Rear
@@ -597,6 +606,7 @@ export const data = [
     name: "Google Pixel 7a - Unlocked Android Cell Phone ",
     rating: 3.9,
     price: 500,
+    apiId: "price_1NN3DbLr0d3cfpotQDjk86m3",
     image: "https://m.media-amazon.com/images/I/8162vKQDSYL._AC_SX425_.jpg",
     company: "Google",
     description: `Google Pixel 7a is fast and efficient, with 8 GB of RAM, an amazing camera, and features rated highest in security[1]
@@ -643,6 +653,7 @@ export const data = [
     name: "JBL Live 460NC - Wireless On-Ear Noise Cancelling Headphones with Long Battery Life and Voice Assistant Control - Black",
     rating: 4.5,
     price: 100,
+    apiId: "price_1NN39ELr0d3cfpot7pWTnjiu",
     discount: 20,
     image: "https://m.media-amazon.com/images/I/61Kq-Pz8d-L._AC_SX425_.jpg",
     company: "JBL",
@@ -695,6 +706,7 @@ export const data = [
     name: "Nirvanaa 751 ANC Wireless Headphone",
     rating: 4.7,
     price: 100,
+    apiId: "price_1NN3AMLr0d3cfpotYIj6bvDR",
     discount: 42,
     image:
       "https://cdn.shopify.com/s/files/1/0057/8938/4802/products/main3_b6563f96-f1a1-4915-b686-d4e37232ec3c_600x.png?v=1685707922",
@@ -753,6 +765,412 @@ export const data = [
           {
             id: "4",
             url: "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/img9_90f0b98f-9c84-46eb-bc6b-e407c3f71376.png?v=1643883432",
+            name: "Image 4",
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "recZkNf2kwmdcds34",
+    name: "OnePlus 11 5G | 16GB RAM+256GB | Dual-SIM | Eternal Green | US Factory Unlocked Android Smartphone |",
+    rating: 4.4,
+    price: 799,
+    apiId: "price_1NN3EOLr0d3cfpotn06KtJD1",
+    discount: 42,
+    image: "https://m.media-amazon.com/images/I/71jvbxyQ2TL._AC_SX679_.jpg",
+    company: "OnePlus",
+    description: `Free 6 months of Google One and Youtube Premium with purchase of OnePlus 11. (New accounts only for each service to qualify)
+    Peak Performance: The new Qualcomm Snapdragon 8 Gen 2 chipset is the most advanced chipset for Android devices, with increased CPU and GPU performance. Integrated AI processes improve background app usage, delivering increased multitasking abilities.
+    Burdenless Imaging: The OnePlus 11 5G features a triple camera system, co-developed with Hasselblad - a primary 50MP sensor, a 48MP Ultra-Wide sensor, and 32MP Tele Sensor. Hasselblad integration unlocks a wide range of photographic possibilities, including OnePlus Billion Color Solution, Natural Color Calibration by Hasselblad, & Hasselblad Portraits.
+    Cinematic Experience: The OnePlus 11 5G features a stunning 6.7” 120Hz fluid AMOLED display, featuring 3rd-gen LTPO technology & AOD. The OnePlus 11 is now Dolby Vision compatible to deliver a more cinematic viewing experience. Coupled with added Dolby Atmos audio, the OnePlus 11 is a true entertainment powerhouse.`,
+    category: "Phones",
+    shipping: true,
+    amount: 1,
+    stock: 14,
+    color: ["White", "Black", "Ice Blue"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
+            url: "https://m.media-amazon.com/images/I/71jvbxyQ2TL._AC_SX679_.jpg",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://m.media-amazon.com/images/I/51viQV+uAuL._AC_.jpg",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://m.media-amazon.com/images/I/51Yui+D9NfL._AC_SX679_.jpg",
+            name: "Image 3",
+          },
+          {
+            id: "4",
+            url: "https://m.media-amazon.com/images/I/41fiCGMam6L._AC_.jpg",
+            name: "Image 4",
+          },
+          {
+            id: "5",
+            url: "https://m.media-amazon.com/images/I/41is2-Tl-JL._AC_.jpg ",
+            name: "Image 5",
+          },
+        ],
+        details: [
+          {
+            id: "1",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f09c59e9-c695-4517-abfd-05ac499371cb.__CR0,47,1440,891_PT0_SX970_V1___.png",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/2373501e-ebdf-49e2-9c84-138e040847c3.__CR0,24,1440,891_PT0_SX970_V1___.png",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/492ffdcd-e3ee-4eec-a49e-beed3b3d4d1a.__CR0,47,1440,891_PT0_SX970_V1___.png",
+            name: "Image 3",
+          },
+          {
+            id: "4",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/fe34a35e-9f91-4bb6-b311-f8a7dfa05a63.__CR0,17,1440,891_PT0_SX970_V1___.png",
+            name: "Image 4",
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "recZkBf6lwmdcds34",
+    name: `TCL 30 SE |2022| 6.52" Unlocked Cell Phone, 4+64GB Android Phone GSM Unlocked Smartphone with 50MP Camera, 5000mAh, Single SIM`,
+    rating: 4.1,
+    price: 129.99,
+    apiId: "price_1NN3FALr0d3cfpotpNSzcSbP",
+    image: "https://m.media-amazon.com/images/I/61M5mIlEpXL._AC_SX522_.jpg",
+    company: "TCL ",
+    description: `64GB of Storage: Create amazing videos and pictures anytime with ease. With the TCL 30 SE unlocked cell phone, you won't run out of space - 64GB internal memory gives you enough space to download and install everything you wish to have on your phone. You can also add up to 512GB of memory with a microSD card (sold separately).
+    6.52" HD+ Display Powerd by NXTVISION: AI optimization allows the screen to deliver more dynamic color and crisp clarity to immerse you in the subtle details. Eye-comfort modes have better protection against blue light and to feel less eye strain while using the TCL 30 SE. The adaptive display allows you to comfortably use the TCL 30 SE in dimly lit spaces as well as in bright daylight.
+    Wireless Carrier Compatibility: Compatible with the T-Mobile and AT&T LTE networks. This device is currently not certified for use on Verizon, Straight talk,Tracfone, Spectrum, Xfinity, etc. For more carrier information, please refer to the compatibility chart or contact our customer support.`,
+    category: "Phones",
+    shipping: true,
+    amount: 1,
+    stock: 14,
+    color: ["White", "Black", "Ice Blue"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
+            url: "https://m.media-amazon.com/images/I/61M5mIlEpXL._AC_SX522_.jpg",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://m.media-amazon.com/images/I/71S5S3vxPRL._AC_SX679_.jpg",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://m.media-amazon.com/images/I/61t2oFdMnYL._AC_SX679_.jpg",
+            name: "Image 3",
+          },
+          {
+            id: "4",
+            url: "https://m.media-amazon.com/images/I/61jYpUqAMWL._AC_SX679_.jpg",
+            name: "Image 4",
+          },
+          {
+            id: "5",
+            url: "https://m.media-amazon.com/images/I/819WAD8uUGL._AC_SX679_.jpg ",
+            name: "Image 5",
+          },
+        ],
+        details: [
+          {
+            id: "1",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/7e0381f6-9471-45c6-a5ba-23fa3d60e2a5.__CR0,0,362,453_PT0_SX362_V1___.jpg",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/dfa145e3-0fbe-44cd-b680-ff130d0d3688.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c234faf2-3d84-48cc-b166-f6c5be9d22c1.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+            name: "Image 3",
+          },
+          {
+            id: "4",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/1f2858c8-398f-493d-96b2-e0c268fe6381.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+            name: "Image 4",
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "recZkNf6lwxdcds34",
+    name: `SAMSUNG Galaxy S23 Cell Phone, Factory Unlocked Android Smartphone, 128GB, 50MP Camera, Night Mode, Long Battery Life, Adaptive Display, US Version, 2023, Cream`,
+    rating: 4.8,
+    price: 699.99,
+    apiId: "price_1NN3G2Lr0d3cfpotL2j2z3Jy",
+    image: "https://m.media-amazon.com/images/I/716nc1e8OdL._AC_SX466_.jpg",
+    company: "SAMSUNG",
+    description: `CAPTURE THE NIGHT IN LOW LIGHT: Whether you’re headed to a concert or romantic night out, there’s no such thing as bad lighting with Night Mode; Galaxy S23 lets you capture epic content in any setting with stunning Nightography
+    HIGH CAMERA RESOLUTION: Create crystal-clear content worth sharing with the 50MP high-resolution camera of Galaxy S23; Whether you’re posting or printing, Galaxy S23 always does the moment justice
+    FASTEST MOBILE PROCESSOR AVAILABLE: Whether you’re working hard, playing hard or doing both at the same time, smoothly switch between apps with our fastest processor ever
+    UNLOCK SMOOTH GAMING: Game at full throttle and smoothly switch between apps; Get more done with our fastest processor ever combined with massive internal storage; And if you’re on the move, keep going with a screen that adapts to your environment
+    POWER TO KEEP GOING: Whether you’re capturing a memory or catching up with friends, Galaxy S23 will be ready when you need it most; With a 3,900mAh battery*, stay in the moment without worrying about your phone dying`,
+    category: "Phones",
+    shipping: true,
+    amount: 1,
+    stock: 14,
+    color: ["White", "Black", "Ice Blue"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
+            url: "https://m.media-amazon.com/images/I/716nc1e8OdL._AC_SX466_.jpg",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://m.media-amazon.com/images/I/81XmKLns-jL._AC_SX466_.jpg",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://m.media-amazon.com/images/I/81-q1b1AD6L._AC_SX466_.jpg",
+            name: "Image 3",
+          },
+          {
+            id: "4",
+            url: "https://m.media-amazon.com/images/I/81sZnAirDwL._AC_SX466_.jpg",
+            name: "Image 4",
+          },
+          {
+            id: "5",
+            url: "https://m.media-amazon.com/images/I/81NtZXGIg-L._AC_SX466_.jpg",
+            name: "Image 5",
+          },
+        ],
+        details: [
+          {
+            id: "1",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/876780f5-beeb-4745-a285-6bfbb6c76cf0.__CR0,0,3051,1250_PT0_SX1464_V1___.jpg",
+            url2: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f7e0833e-5600-4af6-a83e-0fa3e3c12aa0.__CR0,0,3051,1250_PT0_SX1464_V1___.jpg",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/0d6f0992-6cf7-4bc9-b5db-29e9ed990748.__CR0,0,3051,1250_PT0_SX1464_V1___.jpg",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/932e7393-55b1-4e13-bce6-134c9c5da66b.__CR0,0,3051,1250_PT0_SX1464_V1___.jpg",
+            name: "Image 3",
+          },
+          {
+            id: "4",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/7e5e6efe-22c8-4394-b491-1cc37067f9d4.__CR0,0,3051,1250_PT0_SX1464_V1___.jpg",
+            name: "Image 4",
+          },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: "recZkNf5lwxdfrs34",
+    name: `SAMSUNG Galaxy Z Flip 3,128GB, Black, Factory Unlocked, New`,
+    rating: 4.8,
+    price: 600.99,
+    apiId: "price_1NN3GfLr0d3cfpotAhdS0N6H",
+    discount: 15,
+    image: "https://m.media-amazon.com/images/I/61vporWtkUL._AC_SX569_.jpg",
+    company: "SAMSUNG",
+    description: `CAPTURE THE NIGHT IN LOW LIGHT: Whether you’re headed to a concert or romantic night out, there’s no such thing as bad lighting with Night Mode; Galaxy S23 lets you capture epic content in any setting with stunning Nightography
+    HIGH CAMERA RESOLUTION: Create crystal-clear content worth sharing with the 50MP high-resolution camera of Galaxy S23; Whether you’re posting or printing, Galaxy S23 always does the moment justice
+    FASTEST MOBILE PROCESSOR AVAILABLE: Whether you’re working hard, playing hard or doing both at the same time, smoothly switch between apps with our fastest processor ever
+    UNLOCK SMOOTH GAMING: Game at full throttle and smoothly switch between apps; Get more done with our fastest processor ever combined with massive internal storage; And if you’re on the move, keep going with a screen that adapts to your environment
+    POWER TO KEEP GOING: Whether you’re capturing a memory or catching up with friends, Galaxy S23 will be ready when you need it most; With a 3,900mAh battery*, stay in the moment without worrying about your phone dying`,
+    category: "Phones",
+    shipping: true,
+    amount: 1,
+    stock: 14,
+    color: ["White", "Black", "Ice Blue"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
+            url: "https://m.media-amazon.com/images/I/61vporWtkUL._AC_SX569_.jpg",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://m.media-amazon.com/images/I/71jq6bXUkKL._AC_SX679_.jpg",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://m.media-amazon.com/images/I/41bNMBNj9VL._AC_SY679_.jpg",
+            name: "Image 3",
+          },
+          {
+            id: "4",
+            url: "https://m.media-amazon.com/images/I/61ltUJUOKgL._AC_SY679_.jpg",
+            name: "Image 4",
+          },
+        ],
+        details: [],
+      },
+    ],
+  },
+  {
+    id: "recZkNf6lwxlkds34",
+    name: `UMIDIGI Unlocked Smartphones G3, Android 13 Unlocked Smartphone, Dual Sim 4G LTE Mobile Phone`,
+    rating: 4.8,
+    apiId: "price_1NN3HPLr0d3cfpoth5W6w5wU",
+    discount: 10,
+    price: 100.99,
+    image: "https://m.media-amazon.com/images/I/7128cA9v7QL._AC_SX679_.jpg",
+    company: "UMIDIGI",
+    description: `ANDROID 13 MOBILE PHONE : With the latest Android 13 operating system, The latest Android 13 has many improvements, adding new features, greater emphasis on privacy and security, more secure protection of your data, more diverse themes, enabling users to create personalized interfaces and provide more convenient services for each user.
+    5150MAH MEGA BATTERY：G3 Unlocked phones offer extremely high performance in terms of battery life and charging efficiency. Equipped with an above-average 5150mAh battery, it gives you all the power you need to get through the day. Totally relieves the anxiety of running out of power and keeps the whole day fun`,
+    category: "Phones",
+    shipping: true,
+    amount: 1,
+    stock: 14,
+    color: ["White", "Black", "Ice Blue"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
+            url: "https://m.media-amazon.com/images/I/7128cA9v7QL._AC_SX679_.jpg",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://m.media-amazon.com/images/I/71Ll3JLSYQL._AC_SX679_.jpg",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://m.media-amazon.com/images/I/6139ebxesZL._AC_SX679_.jpg",
+            name: "Image 3",
+          },
+          {
+            id: "4",
+            url: "https://m.media-amazon.com/images/I/817x9nWpIQL._AC_SX679_.jpg",
+            name: "Image 4",
+          },
+          {
+            id: "5",
+            url: "https://m.media-amazon.com/images/I/81V1eMPq+AL._AC_SX679_.jpg",
+            name: "Image 5",
+          },
+        ],
+        details: [
+          {
+            id: "1",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/336a2cc0-2762-4427-b699-6c78185a941b.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          },
+          {
+            id: "2",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/1ce08765-4027-42bd-b2a0-dc9ed823b650.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+            url2: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ebf9be36-9ae6-4f62-a6e1-6723e5477b18.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/2b459cc4-486b-443a-bffc-6c3d6a907b18.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+            name: "Image 3",
+          },
+          {
+            id: "4",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e691f778-1b1d-47f8-a852-576de83e45ad.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+            name: "Image 4",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "recZkNf8dwxlkds42",
+    name: `SANSHREUNI Smartphone Unlocked, 5G Dual Sim Cell Phones, 4G+128GB C21 Ultra Unlocked Smartphones`,
+    rating: 2.6,
+    discount: 25,
+    price: 153.99,
+    apiId: "price_1NN3IaLr0d3cfpot0mB4emdl",
+    image: "https://m.media-amazon.com/images/I/71MdkE-g+PL._AC_SX522_.jpg",
+    company: "UMIDIGI",
+    description: `【Global Bands 5G Smartphone】C21 unlocked smart phone compatible with multiple carriers, 5G LTE network, does not work with AT&T, Cricket, CDMA networks like Verizon, Sprint and Boost (support major carriers like T-mobile, Metro PCS etc. You need to ask to help set the correct APN to use.
+      【Face ID + Fingerprint Mobile Phone】 6.8 inch large screen 5G LTE phone unlocked with face recognition function + Fingerprint, 5 points touch capacitive touch screen. Magnesium aluminum body, Nano 3D galvanizing gradient glass back cover. Support WIFI + BT + FM + GPS function, USB C interface, standard 3.5mm headphone jack.
+      【4GB + 128GB expansion】Unlocked smartphones support for 128GB expansion (support for simultaneous installation of two SIM cards and one TF card). 4GB RAM and 128GB enough for apps including messaging, chat apps, cell phone battery capacity is 7300mAh.`,
+    category: "Phones",
+    shipping: true,
+    amount: 1,
+    stock: 14,
+    color: ["White", "Black", "Ice Blue"],
+    images: [
+      {
+        attributes: [
+          {
+            id: "1",
+            url: "https://m.media-amazon.com/images/I/71MdkE-g+PL._AC_SX522_.jpg",
+            name: "Image 1",
+          },
+          {
+            id: "2",
+            url: "https://m.media-amazon.com/images/I/619CgCXwRqL._AC_SX522_.jpg",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://m.media-amazon.com/images/I/71xGS0nMJiL._AC_SX522_.jpg",
+            name: "Image 3",
+          },
+          {
+            id: "4",
+            url: "https://m.media-amazon.com/images/I/71LPyxWXx8L._AC_SX522_.jpg",
+            name: "Image 4",
+          },
+          {
+            id: "5",
+            url: "https://m.media-amazon.com/images/I/61v2QF++wQL._AC_SX679_.jpg",
+            name: "Image 5",
+          },
+        ],
+        details: [
+          {
+            id: "1",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/5360b056-f3ec-4249-823a-493f8c040e54.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          },
+          {
+            id: "2",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/1b163c44-759f-4f71-982b-a464d379d7b1.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+            name: "Image 2",
+          },
+          {
+            id: "3",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/9ad01643-f482-48f2-80c8-4ab63b62ab46.__CR0,33,1500,928_PT0_SX970_V1___.jpg",
+            name: "Image 3",
+          },
+          {
+            id: "4",
+            url: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/976f6749-6508-44a3-9eb7-9df0a3fee843.__CR0,0,970,600_PT0_SX970_V1___.jpg",
             name: "Image 4",
           },
         ],

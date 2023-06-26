@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { loadStripe } from "@stripe/stripe-js";
 import { useCartContext } from "../context/cart_context";
-import { useNavigate } from "react-router-dom";
 import "../index.css";
 import Wrapper from "../components/Wrapper";
 import CartItem from "../components/CartItem";
 
 const Cart = () => {
-  const { cart, clear, del } = useCartContext();
-  const navigate = useNavigate();
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const [loading, setLoading] = useState(false);
+  const { cart, clear } = useCartContext();
+  const [stripe, setStripe] = useState(null);
   // Calculate the total amount
   const total = cart.reduce((accumulator, product) => {
     const discountedPrice =
@@ -21,20 +20,38 @@ const Cart = () => {
     }
   }, 0);
 
-  const handlePlaceOrder = () => {
-    // Perform any necessary logic for placing the order
+  useEffect(() => {
+    const fetchStripe = async () => {
+      const stripeInstance = await loadStripe(
+        import.meta.env.VITE_APP_STRIPE_KEY
+      );
+      setStripe(stripeInstance);
+    };
 
-    // Open the modal
-    setIsModalOpen(true);
-    clear();
-  };
+    fetchStripe();
+  }, []);
 
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
+  const handleCheckout = async () => {
+    setLoading(true);
 
-  const handleGoBack = () => {
-    navigate("/");
+    // Create line items based on the cart items
+    const lineItems = cart.map((product) => ({
+      price: product.apiId,
+      quantity: product.amount,
+    }));
+
+    // Create a new Stripe Checkout Session
+    try {
+      const { error } = await stripe.redirectToCheckout({
+        lineItems,
+        mode: "payment",
+        successUrl: `${window.location.origin}/success`, // Add success URL parameter
+        cancelUrl: `${window.location.origin}/cancel`, // Replace with your cancel URL
+      });
+    } catch (error) {
+      console.error("Error:", error);
+      // Handle error
+    }
   };
 
   return (
@@ -81,10 +98,31 @@ const Cart = () => {
                 </div>
                 {/* BUTTON START */}
                 <button
-                  className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75"
-                  onClick={handlePlaceOrder}
+                  className="w-full py-4 rounded-full bg-black text-white text-lg font-medium transition-transform active:scale-95 mb-3 hover:opacity-75 flex justify-center gap-8"
+                  onClick={handleCheckout}
                 >
                   Place Order
+                  {loading && (
+                    <div role="status">
+                      <svg
+                        aria-hidden="true"
+                        class="w-8 h-8 mr-2 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+                        viewBox="0 0 100 101"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                          fill="currentColor"
+                        />
+                        <path
+                          d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                          fill="currentFill"
+                        />
+                      </svg>
+                      <span class="sr-only">Loading...</span>
+                    </div>
+                  )}
                 </button>
                 {/* BUTTON START */}
               </div>
@@ -104,28 +142,6 @@ const Cart = () => {
             <span className="text-center mt-4">Your cart is empty</span>
           </div>
         )}
-
-        {/* MODAL START */}
-        {isModalOpen && (
-          <div className="fixed inset-0 flex items-center justify-center z-50">
-            <div className="bg-white rounded-xl w-[320px] h-[332px] p-14 shadow flex flex-col  text-center">
-              <h2 className="text-lg w-full font-semibold mb-4">
-                Thanks for your order!
-              </h2>
-              <p>Your order has been placed.</p>
-              <button
-                className="px-4 py-2 mt-9 rounded-full bg-black text-white font-medium flex justify-center m-auto "
-                onClick={() => {
-                  closeModal();
-                  handleGoBack();
-                }}
-              >
-                Go Back
-              </button>
-            </div>
-          </div>
-        )}
-        {/* MODAL END */}
       </Wrapper>
     </div>
   );

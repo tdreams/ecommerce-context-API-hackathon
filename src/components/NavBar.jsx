@@ -35,7 +35,7 @@ const NavBar = () => {
   });
   return (
     <header
-      className={`w-full h-[50px] md:h-[80px] bg-white flex items-center justify-between z-20 sticky top-0 transition-transform duration-300 ${show}  border-b-[1.5px] border-y-gray-200`}
+      className={`w-full h-[50px] md:h-[80px] bg-white flex items-center justify-between z-20 sticky top-0 transition-transform duration-300 ${show}  border-b-[1.5px] border-y-gray-200 z-[200]`}
     >
       <Wrapper classname="h-[60px] flex justify-between items-center ">
         <NavLink to="/">

@@ -78,13 +78,13 @@ const YouMayLike = ({ products }) => {
                         {product.name.slice(0, 15).concat("...")}
                       </a>
                     </h3>
-                    <p className="text-sm text-gray-500">
-                      <ProductRating rating={product.rating} />
-                    </p>
                   </div>
                   <div>{formatPrice(product.price, product.discount)}</div>
                 </div>
               </NavLink>
+              <p className="text-sm text-gray-500">
+                <ProductRating rating={product.rating} />
+              </p>
             </div>
           </div>
         ))}

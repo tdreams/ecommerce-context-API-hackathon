@@ -7,7 +7,7 @@ const reducer = (state, action) => {
     case "CLEAR":
       return { ...state, cart: [] };
     case "ADD":
-      const { id, amount, products, color } = action.payload; // change 'product' to 'products'
+      const { id, amount, apiId, products, color } = action.payload; // change 'product' to 'products'
       const existingItem = state.cart.find((item) => item.id === id);
 
       if (existingItem) {
@@ -23,6 +23,7 @@ const reducer = (state, action) => {
           id,
           amount,
           price: products.price,
+          apiId: products.apiId,
           name: products.name,
           image: products.image,
           category: products.category,

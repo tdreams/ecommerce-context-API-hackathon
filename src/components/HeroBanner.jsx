@@ -21,7 +21,9 @@ const HeroBanner = () => {
           <div className="bg-[#dcdcdc] relative leading-[1] w-full md:h-[400px] h-[450px] text-left">
             <Wrapper>
               <div className="pt-10">
-                <p className="md:block hidden font-medium ">JBL Pro Play</p>
+                <p className="md:block hidden font-medium md:text-lg text-red-600">
+                  JBL Pro Play
+                </p>
                 <p className="md:hidden font-bold absolute top-[64%] text-6xl">
                   JBL Pro Play
                 </p>
@@ -43,7 +45,7 @@ const HeroBanner = () => {
 
               <button
                 type="button"
-                className="bg-black text-white px-6 py-3 mt-8 rounded-sm font-medium hover:bg-opacity-90 hidden md:block"
+                className="bg-black text-white px-6 py-5 mt-8 rounded-sm font-medium hover:bg-opacity-90 hidden md:block"
                 onClick={handleClickButton}
               >
                 Shop now

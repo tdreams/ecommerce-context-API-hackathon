@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FaChevronRight } from "react-icons/fa";
 import { useGlobalContext } from "../context/context";
 import { useCartContext } from "../context/cart_context";
@@ -9,6 +9,7 @@ import ProductRating from "./ProductRating";
 const ProductsCard = ({ currentPage }) => {
   const { products } = useGlobalContext();
   const headphones = subMenuNav[0].name;
+  const navigate = useNavigate();
 
   if (products.length === 0) {
     return <p>No headphones available.</p>; // Display a message when no headphones are available
@@ -38,6 +39,13 @@ const ProductsCard = ({ currentPage }) => {
     return <p className="mr-2 text-xl font-semibold">$ {price.toFixed(2)}</p>;
   };
 
+  const handleViewAll = () => {
+    navigate("/headphones");
+  };
+
+  const filteredProducts =
+    currentPage !== "headphones" ? products : products.slice(0, 6);
+
   return (
     <div>
       <div className="mt-10 mb-2 flex items-baseline justify-between relative">
@@ -50,16 +58,16 @@ const ProductsCard = ({ currentPage }) => {
             : `All Headphones`}
         </h2>
         {currentPage === "headphones" && (
-          <NavLink to="/headphones">
-            <div className="text-right text-neutral-800 text-[16px] font-medium flex items-center">
+          <div className="text-right text-neutral-800 text-[16px] font-medium ">
+            <button className="flex items-center" onClick={handleViewAll}>
               View All <FaChevronRight className="font-light text-gray-500" />
-            </div>
-          </NavLink>
+            </button>
+          </div>
         )}
       </div>
 
       <div className="flex flex-wrap w-full relative justify-start gap-y-4 md:justify-center lg:justify-start mb-10 m-auto">
-        {products
+        {filteredProducts
           .filter((product) => product.category === headphones)
           .map((product) => (
             <div
