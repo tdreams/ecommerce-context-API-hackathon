@@ -5,7 +5,7 @@ import { Home } from "./pages";
 import Cart from "./pages/Cart";
 import SingleProduct from "./pages/SingleProduct";
 import AllHeadPhones from "./pages/AllHeadPhones";
-import { Footer, NavBar } from "./components";
+import { Footer, NavBar, ScrollToTheTop } from "./components";
 import AllPhones from "./pages/AllPhones";
 import AllDiscount from "./pages/AllDiscount";
 import Success from "./pages/Success";
@@ -13,6 +13,7 @@ import Success from "./pages/Success";
 function App() {
   return (
     <div>
+      <ScrollToTheTop />
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
